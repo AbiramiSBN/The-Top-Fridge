@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PayPal-Style Donation</title>
+  <style>
+    /* Reset & Global */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      width: 100%;
+      max-width: 480px;
+      padding: 20px 30px;
+      background-color: #003087;  /* PayPal blue */
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+    .header img {
+      height: 30px;
+      margin-right: 10px;
+    }
+    .header h1 {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    /* Main container */
+    .donation-box {
+      width: 100%;
+      max-width: 480px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 30px 0;
+      padding: 30px 25px;
+    }
+    .donation-box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #111;
+    }
+    .donation-box p {
+      margin-bottom: 20px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    /* Form fields */
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccd0d5;
+      border-radius: 4px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #003087;
+    }
+
+    /* Donate button */
+    .donate-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #0070ba;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color .2s;
+    }
+    .donate-btn:hover {
+      background-color: #005ea6;
+    }
+
+    /* Footer note */
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <!-- Replace src with actual PayPal logo or your own -->
+    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal Logo">
+    <h1>Donate with PayPal</h1>
+  </header>
+
+  <!-- Donation form box -->
+  <div class="donation-box">
+    <h2>Support Our Cause</h2>
+    <p>Your gift helps us fight hunger. Thank you for your generosity.</p>
+
+    <form>
+      <div class="form-group">
+        <label for="amount">Donation Amount</label>
+        <div style="display:flex;">
+          <span style="padding: 12px; background: #eee; border: 1px solid #ccd0d5; border-right: none; border-radius: 4px 0 0 4px;">$</span>
+          <input id="amount" type="number" placeholder="Enter amount" min="1" required style="border-radius: 0 4px 4px 0;">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="frequency">Donation Frequency</label>
+        <select id="frequency">
+          <option value="one-time">One-Time</option>
+          <option value="monthly">Monthly</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input id="email" type="email" placeholder="you@example.com" required>
+      </div>
+
+      <!-- Non-functional Donate button -->
+      <button type="button" class="donate-btn">Donate Now</button>
+    </form>
+
+    <p class="footer-note">You will be redirected to PayPal to complete your donation.</p>
+  </div>
+</body>
+</html>

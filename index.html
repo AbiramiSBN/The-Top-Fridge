@@ -41,10 +41,11 @@
       margin-top: 20px;
       color: #2ecc71;
     }
-    p, ul {
+    p {
       margin-top: 15px;
     }
     ul {
+      margin-top: 15px;
       list-style: inside disc;
     }
     footer {
@@ -74,6 +75,59 @@
       background-color: #c0392b;
     }
 
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .modal-content {
+      background: #111;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+    }
+    .modal-content p {
+      margin-bottom: 20px;
+      color: #eee;
+    }
+    .modal-link {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 10px 16px;
+      background: #e74c3c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .modal-link:hover {
+      background: #c0392b;
+    }
+    .close-btn {
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .close-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
     @media (max-width: 600px) {
       .container {
         margin: 20px;
@@ -98,46 +152,65 @@
   </style>
 </head>
 <body>
+
   <!-- Donate Button -->
-  <a href="https://abiramisbn.github.io/The-Top-Fridge/index2.html" class="donate-btn" target="_blank" rel="noopener">Donate</a>
+  <button id="donate-btn" class="donate-btn">Donate</button>
 
   <div class="container">
     <h1>Hunger</h1>
 
     <section>
       <h2>The Problem</h2>
-      <p><strong>The problem we are trying to solve is malnourishment.</strong></p>
+      <p>
+        <strong>The problem we are trying to solve is malnourishment.</strong> Around the world, hunger is not simply the absence of food—it’s the absence of the right nutrients, the nourishment that enables human bodies and minds to grow, develop, and thrive. When children skip meals, they fall behind in school; when adults cannot afford adequate calories, they lose the strength to work and care for their families. Chronic undernourishment deepens poverty, erodes economic productivity, and perpetuates a cycle that traps entire communities in hardship. The reality is sobering: without consistent access to healthy food, the most vulnerable among us suffer the consequences for a lifetime.
+      </p>
       <ul>
         <li>Over 820 million people worldwide are chronically undernourished each year.</li>
-        <li>Every day, approximately 9 million children under five suffer from severe acute malnutrition.</li>
+        <li>Nearly 150 million children under five experience stunted growth due to malnutrition.</li>
         <li>Malnourishment contributes to nearly half of all child deaths globally.</li>
+        <li>Food insecurity affects one in nine people on our planet.</li>
       </ul>
       <h3>Facts About Food Hunger</h3>
       <ul>
-        <li>One in eleven people don’t have food.</li>
-        <li>Climate change is helping increase food hunger because it reduces crop yields.</li>
-        <li>50% of all child deaths are caused by hunger.</li>
-        <li>733 million people face hunger.</li>
+        <li>One in eleven people lacks sufficient food to live a healthy, active life.</li>
+        <li>Climate change, conflict, and economic instability are pushing more families into hunger every year.</li>
+        <li>Every 10 seconds, a child dies from causes related to malnutrition.</li>
+        <li>More than 733 million people face acute chronic hunger.</li>
+        <li>Nearly 60% of chronically hungry individuals are women and children.</li>
+        <li>In the United States, over 35 million people faced food insecurity in 2023.</li>
+        <li>Globally, food waste accounts for roughly one-third of all food produced but never consumed.</li>
+        <li>Food insecurity is linked to higher risks of chronic illnesses such as diabetes and heart disease.</li>
+        <li>Children in food-insecure households are more likely to repeat a grade or be suspended from school.</li>
+        <li>Hunger costs the global economy over $1 trillion annually in lost productivity and healthcare expenses.</li>
       </ul>
     </section>
 
     <section>
       <h2>The Solution</h2>
-      <p><strong>We will create an organization named "The Top Refrigerator" to help people without food by giving them food.</strong></p>
+      <p>
+        <strong>We will create an organization named "The Top Refrigerator" to help people without food by supplying fresh, nutritious meals and essential supplies.</strong> Our approach combines community-driven initiatives with strategic partnerships. By placing strategically located community fridges, we ensure that surplus food from retailers, restaurants, and local farms reaches those who need it most before it spoils. Mobile pantry vans will extend our reach to underserved neighborhoods, delivering fresh produce and shelf-stable goods directly to doorsteps. Additionally, our educational programs will teach families how to prepare balanced meals on a budget, equipping them for lasting food security.
+      </p>
       <h3>What We Will Do</h3>
       <ul>
-        <li>We will get public help from friends and family to get fridges and food.</li>
-        <li>We will advertise our organization to the internet to get donations of money or food.</li>
+        <li>Establish and maintain community fridges and food hubs, stocked daily with nutritious items from partner farms and grocery stores.</li>
+        <li>Partner with local farmers, retailers, and restaurants to recover surplus food that would otherwise go to waste.</li>
+        <li>Deploy mobile pantry vans to bring fresh produce and emergency food kits to areas with limited grocery access.</li>
+        <li>Offer cooking demonstrations and nutrition workshops at community centers and schools.</li>
+        <li>Coordinate volunteer networks for food distribution, helping to build civic engagement and local leadership.</li>
       </ul>
     </section>
 
     <section>
       <h2>Ways You Can Help</h2>
+      <p>
+        Every action counts. Whether you donate time, resources, or simply spread the word, you become part of a movement to end hunger in our communities. Your support empowers neighbors, strengthens local economies, and builds resilience against future crises. Together, we can transform surplus into sustenance and apathy into action.
+      </p>
       <ul>
-        <li>Donate food to food banks and organizations.</li>
-        <li>Donate money to trusted organizations like Feeding America or to our organization The Top Refrigerator.</li>
-        <li>Volunteer at places like Feeding America Food Banks, Meals on Wheels and Local Soup Kitchens.</li>
-        <li>Create campaigns to help people without food.</li>
+        <li>Donate non-perishable food items, fresh produce, or funds to keep our fridges and mobile pantries stocked.</li>
+        <li>Volunteer your time sorting and distributing meals at community sites or in our mobile vans.</li>
+        <li>Create fundraising campaigns—online or in your neighborhood—to support operational costs.</li>
+        <li>Advocate for policies that address the root causes of hunger, from food waste reform to nutrition assistance programs.</li>
+        <li>Share our story on social media to raise awareness and inspire others to join the fight against hunger.</li>
       </ul>
     </section>
 
@@ -145,5 +218,36 @@
       Developed by Sanjivram Balasubramanian.
     </footer>
   </div>
+
+  <!-- Donation Modal -->
+  <div id="donation-modal" class="modal">
+    <div class="modal-content">
+      <p>Thank you for considering a donation! To support senior nutrition and community meals, click below to go to the official Meals on Wheels donation page.</p>
+      <a href="https://www.mealsonwheelsamerica.org/get-involved/donate" target="_blank" class="modal-link">Donate to Meals on Wheels</a>
+      <br/>
+      <button class="close-btn" id="close-modal">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const donateBtn = document.getElementById('donate-btn');
+    const modal = document.getElementById('donation-modal');
+    const closeModal = document.getElementById('close-modal');
+
+    donateBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
+
